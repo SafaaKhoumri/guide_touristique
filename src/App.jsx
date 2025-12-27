@@ -288,19 +288,18 @@ const AboutPage = () => (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
         <div className="md:col-span-1">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80" alt="Guide" className="rounded-lg shadow-xl w-full" />
+          <img src="/images/profile.png" alt="Guide" className="rounded-lg shadow-xl w-full" />
         </div>
         <div className="md:col-span-2">
           <h1 className="text-4xl font-bold mb-6">À propos de moi</h1>
           <p className="text-lg text-gray-700 mb-4">
-            Passionné par ma région depuis toujours, je partage mon amour pour notre patrimoine culturel et naturel depuis plus de 10 ans. Guide touristique certifié et diplômé en histoire et culture locale, j'ai eu le plaisir d'accompagner des milliers de visiteurs venus du monde entier.
+           Je m'appelle Taoufik Khoumri, je suis Marocain et je vis actuellement à Bruxelles. Passionné par la découverte du monde et ses cultures, j'aime partager cette curiosité avec les voyageurs.
+
+Mon objectif est de vous faire vivre des expériences uniques, loin des circuits touristiques classiques. Je vous accompagne à la découverte de sites emblématiques, de trésors cachés, et je vous fais rencontrer les artisans et habitants locaux pour comprendre pleinement l’âme des lieux que nous visitons.
+
+Chaque visite est personnalisée, adaptée à vos intérêts et à votre rythme, pour que votre voyage devienne une aventure authentique et mémorable.
           </p>
-          <p className="text-lg text-gray-700 mb-4">
-            Ma mission est de vous faire découvrir les trésors cachés et les sites emblématiques avec authenticité et passion. Chaque visite est une aventure unique, adaptée à vos intérêts et à votre rythme.
-          </p>
-          <p className="text-lg text-gray-700">
-            Au-delà des circuits classiques, je vous emmène rencontrer les artisans locaux, découvrir la gastronomie authentique et comprendre l'âme véritable de notre région.
-          </p>
+         
         </div>
       </div>
 
