@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Users, Globe, Star, Calendar, Camera, MessageCircle, Menu, X, ChevronRight , Instagram, Moon } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Users, Globe, Star, Calendar, Utensils,Camera, MessageCircle, Menu, X, ChevronRight , Instagram, Moon } from 'lucide-react';
 
 // Data
 const circuits = [
@@ -353,7 +353,7 @@ const AboutPage = () => (
             </div>
           </div>
           <div className="flex items-start">
-            <Camera className="text-blue-600 mr-4 flex-shrink-0" size={24} />
+            <Utensils className="text-blue-600 mr-4 flex-shrink-0" size={24} />
             <div>
               <h3 className="font-semibold text-lg">Food & Culture</h3>
               <p className="text-gray-600">Food and drinks experience, cultural insights</p>
