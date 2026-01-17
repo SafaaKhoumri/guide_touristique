@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Users, Globe, Star, Calendar, Camera, MessageCircle, Menu, X, ChevronRight , Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Users, Globe, Star, Calendar, Camera, MessageCircle, Menu, X, ChevronRight , Instagram, Moon } from 'lucide-react';
 
 // Data
 const circuits = [
@@ -179,7 +179,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2024 StoryFlow Tours. All rights reserved.</p>
+        <p>&copy; 2026 StoryFlow Tours. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -359,6 +359,16 @@ const AboutPage = () => (
               <p className="text-gray-600">Food and drinks experience, cultural insights</p>
             </div>
           </div>
+          <div className="flex items-start">
+  <Moon className="text-blue-600 mr-4 flex-shrink-0" size={24} />
+  <div>
+    <h3 className="font-semibold text-lg">Nightlife</h3>
+    <p className="text-gray-600">
+      Bars, local pubs, Belgian beers & vibrant nightlife experiences
+    </p>
+  </div>
+</div>
+
         </div>
       </div>
 
@@ -370,21 +380,27 @@ const AboutPage = () => (
               <Star className="text-blue-600" size={40} />
             </div>
             <h3 className="text-xl font-semibold mb-2">Authenticity</h3>
-            <p className="text-gray-600">Real experiences beyond typical tourist attractions</p>
+            <p className="text-gray-600">I tell Brussels as it truly lives and breathes, beyond postcards and clichés.
+Each story is rooted in real places, real people, and lived experiences.
+What I share is honest, human, and deeply connected to the soul of the city.</p>
           </div>
           <div className="text-center">
             <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Users className="text-blue-600" size={40} />
             </div>
             <h3 className="text-xl font-semibold mb-2">Connection</h3>
-            <p className="text-gray-600">Creating meaningful connections through storytelling</p>
+            <p className="text-gray-600">Through storytelling, I create moments where people feel linked to the places they walk through.
+Streets, histories, and faces come together in a shared flow of meaning.
+Connection is born when a city stops being foreign and starts feeling familiar.</p>
           </div>
           <div className="text-center">
             <div className="bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Globe className="text-blue-600" size={40} />
             </div>
             <h3 className="text-xl font-semibold mb-2">Cultural Bridge</h3>
-            <p className="text-gray-600">Bridging cultures with sensitivity and respect</p>
+            <p className="text-gray-600">I guide with the intention of bringing cultures closer, gently and respectfully.
+By honoring differences and shared humanity, stories become bridges rather than boundaries.
+Every tour is an invitation to see the city — and each other — with open curiosity.</p>
           </div>
         </div>
       </div>
