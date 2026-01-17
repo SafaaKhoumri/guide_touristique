@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Users, Globe, Star, Calendar, Camera, MessageCircle, Menu, X, ChevronRight } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Users, Globe, Star, Calendar, Camera, MessageCircle, Menu, X, ChevronRight , Instagram } from 'lucide-react';
 
 // Data
 const circuits = [
@@ -8,43 +8,93 @@ const circuits = [
     title: "Classic Brussels Highlights",
     duration: "2 hours",
     location: "Brussels City Center",
-    includes: ["Grand Place & UNESCO insights", "Manneken Pis legends", "Royal Galleries", "Mont des Arts viewpoint", "Photo opportunities"],
+    includes: [
+      "Grand Place & UNESCO insights",
+      "Manneken Pis legends",
+      "Royal Galleries",
+      "Mont des Arts viewpoint",
+      "Photo opportunities"
+    ],
     price: "On request",
-    img: "/images/",
-    description: "Discover Brussels' iconic landmarks through engaging stories about guilds, royal history, and local humor. From the magnificent Grand Place to the charming Mont des Arts, experience the city's highlights with meaningful narratives."
+    img: "/images/GrandPlace.jpg",
+    description:
+      "Discover Brussels' iconic landmarks through engaging stories about guilds, royal history, and local humor. From the magnificent Grand Place to the charming Mont des Arts, experience the city's highlights with meaningful narratives."
   },
   {
     id: 2,
     title: "Hidden Gems & Local Life",
     duration: "2-3 hours",
     location: "Sablon & Secret Spots",
-    includes: ["Sablon Square exploration", "Hidden alleys & courtyards", "Street art discoveries", "Local café culture", "Authentic Brussels experience"],
+    includes: [
+      "Sablon Square exploration",
+      "Hidden alleys & courtyards",
+      "Street art discoveries",
+      "Local café culture",
+      "Authentic Brussels experience"
+    ],
     price: "On request",
-    img: "/images/",
-    description: "Step off the beaten path and experience Brussels like a local. Explore secret viewpoints, charming alleys, vibrant street art, and authentic neighborhoods that reveal the city's true character."
+    img: "/images/sablon.jpg",
+    description:
+      "Step off the beaten path and experience Brussels like a local. Explore secret viewpoints, charming alleys, vibrant street art, and authentic neighborhoods that reveal the city's true character."
   },
   {
     id: 3,
     title: "Chocolate & Art Nouveau",
     duration: "2-3 hours",
     location: "Art Nouveau District",
-    includes: ["Art Nouveau architecture walk", "Chocolate shop visits", "Tasting opportunities", "Architectural stories", "Cultural insights"],
+    includes: [
+      "Art Nouveau architecture walk",
+      "Chocolate shop visits",
+      "Tasting opportunities",
+      "Architectural stories",
+      "Cultural insights"
+    ],
     price: "On request",
-    img: "/images/",
-    description: "Indulge in Brussels' finest offerings: stunning Art Nouveau facades and world-renowned chocolate. Walk through architectural masterpieces while discovering the city's sweet heritage with optional tastings."
+    img: "/images/brusselscenter.jpg",
+    description:
+      "Indulge in Brussels' finest offerings: stunning Art Nouveau facades and world-renowned chocolate. Walk through architectural masterpieces while discovering the city's sweet heritage with optional tastings."
+  },
+
+  // ✅ NEW: Food & Drinks Experience
+  {
+    id: 4,
+    title: "Food & Drinks Experience",
+    duration: "3 hours",
+    location: "City Center & Local Districts",
+    includes: [
+      "Belgian waffle tasting",
+      "Chocolate & praline discoveries",
+      "Local beer tasting",
+      "Traditional Belgian dishes",
+      "Food culture stories"
+    ],
+    price: "On request",
+    img: "/images/food.png",
+    description:
+      "Taste your way through Brussels with an immersive food and drinks experience. Discover Belgian specialties, local beers, and hidden culinary spots while learning about the country's rich gastronomic culture."
+  },
+
+  // ✅ NEW: Nightlife Experience
+  {
+    id: 5,
+    title: "Brussels Nightlife Experience",
+    duration: "3-4 hours",
+    location: "Bars & Night Districts",
+    includes: [
+      "Iconic Belgian bars",
+      "Craft beer & cocktail spots",
+      "Local nightlife stories",
+      "Music & vibrant atmospheres",
+      "Safe & guided night tour"
+    ],
+    price: "On request",
+    img: "/images/nightlife.jpg",
+    description:
+      "Experience Brussels after dark with a guided nightlife tour. From legendary bars to lively neighborhoods, enjoy Belgian beers, cocktails, music, and the city's vibrant evening atmosphere."
   }
 ];
 
 const testimonials = [];
-
-const gallery = [
-  "/images/",
-  "/images/",
-  "/images/",
-  "/images/",
-  "/images/",
-  "/images/"
-];
 
 // Components
 const Header = ({ currentPage, setCurrentPage, mobileMenuOpen, setMobileMenuOpen }) => {
@@ -52,7 +102,7 @@ const Header = ({ currentPage, setCurrentPage, mobileMenuOpen, setMobileMenuOpen
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'tours', label: 'Tours' },
-    { id: 'gallery', label: 'Gallery' },
+
     { id: 'reviews', label: 'Reviews' },
     { id: 'contact', label: 'Contact' }
   ];
@@ -124,8 +174,7 @@ const Footer = () => (
           <h3 className="text-xl font-bold mb-4">Follow Us</h3>
           <div className="flex space-x-4">
             <a href="https://www.instagram.com/storyflow.tours" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">Instagram</a>
-            <a href="#" className="hover:text-blue-400 transition">Facebook</a>
-            <a href="#" className="hover:text-blue-400 transition">TripAdvisor</a>
+           
           </div>
         </div>
       </div>
@@ -138,7 +187,7 @@ const Footer = () => (
 
 const HomePage = ({ setCurrentPage }) => (
   <div className="pt-16">
-    <div className="relative h-screen bg-cover bg-center" style={{backgroundImage: "url('/images/')"}}>
+    <div className="relative h-screen bg-cover bg-center" style={{backgroundImage: "url('/images/test2.jpeg')"}}>
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
         <div className="text-white max-w-2xl">
@@ -260,7 +309,7 @@ const AboutPage = () => (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
         <div className="md:col-span-1">
-          <img src="/images/profile.png" alt="Taoufik Khoumri" className="rounded-lg shadow-xl w-full" />
+          <img src="/images/Tuko.jpg" alt="Taoufik Khoumri" className="rounded-lg shadow-xl w-full" />
         </div>
         <div className="md:col-span-2">
           <h1 className="text-4xl font-bold mb-6">About Me</h1>
@@ -404,38 +453,7 @@ const ToursPage = () => (
   </div>
 );
 
-const GalleryPage = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
 
-  return (
-    <div className="pt-24 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold text-center mb-4">Photo Gallery</h1>
-        <p className="text-center text-gray-600 mb-16">Moments captured during our Brussels tours</p>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {gallery.map((img, idx) => (
-            <div key={idx} className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group" onClick={() => setSelectedImage(img)}>
-              <img src={img} alt={`Gallery ${idx + 1}`} className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-300" />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition flex items-center justify-center">
-                <Camera className="text-white opacity-0 group-hover:opacity-100 transition" size={40} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4" onClick={() => setSelectedImage(null)}>
-          <div className="relative max-w-5xl max-h-full">
-            <button className="absolute -top-12 right-0 text-white text-4xl hover:text-gray-300" onClick={() => setSelectedImage(null)}>×</button>
-            <img src={selectedImage} alt="Selected" className="max-w-full max-h-screen object-contain rounded-lg" />
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
 
 const ReviewsPage = () => (
   <div className="pt-24 pb-20">
@@ -542,6 +560,25 @@ const ContactPage = () => (
                 <p className="text-gray-600 text-sm mt-1">Quick response guaranteed</p>
               </div>
             </div>
+<div className="flex items-start">
+  <div className="bg-pink-100 p-3 rounded-lg mr-4">
+    <Instagram className="text-pink-600" size={24} />
+  </div>
+  <div>
+    <h3 className="font-semibold text-lg mb-1">Instagram</h3>
+    <a
+      href="https://www.instagram.com/storyflow.tours"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-pink-600 hover:underline"
+    >
+      @storyflow.tours
+    </a>
+    <p className="text-gray-600 text-sm mt-1">
+      Discover stories, tours & moments
+    </p>
+  </div>
+</div>
 
             <div className="flex items-start">
               <div className="bg-purple-100 p-3 rounded-lg mr-4">
@@ -611,7 +648,7 @@ const App = () => {
       case 'home': return <HomePage setCurrentPage={setCurrentPage} />;
       case 'about': return <AboutPage />;
       case 'tours': return <ToursPage />;
-      case 'gallery': return <GalleryPage />;
+
       case 'reviews': return <ReviewsPage />;
       case 'contact': return <ContactPage />;
       default: return <HomePage setCurrentPage={setCurrentPage} />;
